@@ -129,7 +129,68 @@ console.log(`${nameOfAddress} has a balance of ${addressBalance}`);
 ##
 
 build-a-peer-to-peer-network 
+Index.js 
+import { getTransactions, writeTransactions } from './blockchain-helpers.js';
+import { getKnownPeerAddresses } from './network-helpers.js';
 
+import WebSocket, { WebSocketServer } from 'ws';
+import dotenv from 'dotenv';
+import { Socket } from 'dgram';
+import { SocketAddress } from 'net';
+import { connected } from 'process';
+dotenv.config();
+
+const knownPeers = getKnownPeerAddresses();
+const MY_PORT = process.env.PORT;
+const MY_ADDRESS = `ws://localhost:${MY_PORT}`;
+const transactions = getTransactions();
+const openedSockets = [];
+const connectedAddresses = [];
+const attemptingToConnectAddresses = [];
+// Add your code below
+
+const myServer = new WebSocketServer ({port: MY_PORT});
+myServer.on('connection', Socket =>{
+    console.log('connection recieved');
+    Socket.on ('message', dataString => {
+    console.log ('message recieved': + dataString);
+    const message = JSON.parse(dataString);
+    message.data.forEach(address => connect(address));
+    
+    });
+});
+
+function connect (address) {
+    if(address != MY_ADDRESS && !attemptingToConnectAddresses.includes(address) && !connectedAddresses(includesadrress)) {
+    attemptingToConnectAddresses.push(address);
+    console.log('attempting to connect to' + address);
+}
+
+    const socket = new WebSocket (address);
+    socket.on('open', ()=> {
+    console.log('connection to ' + address + ' opened');
+        attemptingToConnectAddresses.splice(attemptingToConnectAddresses.indexOf (address), ]);
+        connectedAddresses.push(address);
+        socket.send(
+            JSON.stringify{(TYPE:'HANDSHAKE', data: [MY_ADDRESS, ...connectedAddress] }))); 
+
+    });
+
+    socket.on('close', () => {
+           console.log ('connection to' + adrress + ' closed');
+           attemptingToConnectAddresses.splice(Connected    Addresses.indexOf (address), 1);
+    });
+
+    socket.on('error', () => {
+          console.log('error connecting to ' + address);
+          const index = attemptingToConnectAddresses.indexOf (address)
+          if (index => 0) {
+          attemptingToConnectAddresses.splice(index, 1);
+          }
+    )};
+
+
+known.forEach(peer =>connect(peer));
 
 
 ##
