@@ -101,3 +101,10 @@ Transactions.json
 
 ##
 
+Contract-wallets.json
+{
+    "fundrasing-contract" {
+        "publicKey": 
+        "privateKey": 
+    } 
+}
