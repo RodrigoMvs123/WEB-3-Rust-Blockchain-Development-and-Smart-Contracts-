@@ -4,6 +4,8 @@
 https://www.youtube.com/watch?v=hDfkyF8U-pw
 https://web3.freecodecamp.org/web3  
 
+https://github.com/freeCodeCamp/web3-curriculum/tree/544b18f451f063438a73e49e02d509f8fb79521f
+
 https://www.totvs.com/blog/gestao-juridica/smart-contracts/
 
 https://www.rust-lang.org/pt-BR/
