@@ -194,7 +194,7 @@ known.forEach(peer =>connect(peer));
 
 
 ##
-
+Build a Web3 Client-Side Package for Your App
 ##
 
 ##
