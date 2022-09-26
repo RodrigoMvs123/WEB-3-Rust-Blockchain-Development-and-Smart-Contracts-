@@ -79,5 +79,25 @@ Wallets.json
 } 
 
 ##
+Transactions.json
+[
+    {
+        "fromAddress": null,
+        "toAddress": 047f18310ca11477a0ccd328df42d7ff9cd068ac6816d9c76535b0fe1b7b45ab7312ff6167964c050e66c6db00642c5492
+        "amount": 50
+    },
+    {
+        "fromAddress": 0412bb6129d866a633aa62270e84be8630ebf803a64f6879a5ac08f12cde2aeca2eb272481fcc742d568aad80e44ba68c5
+        "toAddress": 
+        "amount"
+        "hash": 
+        "signature":
+    }
+        "fromAddress": 
+        "toAddress": "041608a1e5bc12c505bb60b52bf64ca40f816f14acc9e31bfa21c6c7ba435a215a8f54ba49ce767b950cfdfea2efe261a9"
+        "amount": 50 
 
+]
+
+##
 
