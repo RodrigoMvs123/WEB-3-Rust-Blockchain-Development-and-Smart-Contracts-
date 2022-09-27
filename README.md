@@ -9,7 +9,7 @@ https://github.com/freeCodeCamp/web3-curriculum/tree/544b18f451f063438a73e49e02d
 ##
 https://raw.githubusercontent.com/RodrigoMvs123/WEB-3-Rust-Blockchain-Development-and-Smart-Contracts-/main/README.md
 ##
-
+https://github.com/RodrigoMvs123/WEB-3-Rust-Blockchain-Development-and-Smart-Contracts-/blame/main/README.md
 ##
 
 https://www.totvs.com/blog/gestao-juridica/smart-contracts/
