@@ -195,6 +195,75 @@ known.forEach(peer =>connect(peer));
 
 ##
 Build a Web3 Client-Side Package for Your Dapp
+
+index.js 
+import { json } from "body-parser";
+
+export default class Web3 {
+    constructor(provider){
+        this.address = null;
+        this.provider = new URL(provider);
+    }
+    setClientAddress(address){
+        this.address = address;
+
+    }
+    async getBalance(address){
+        const body = {
+        from: from || this.address, to, amount
+    };
+        const res = await fetch('${this.provider.href}transfer', 
+        {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(body)
+        });
+        const response = await res.json();
+        if(response.error){
+            throw new Error(response.error);
+
+        }
+        return response.result;
+    }
+    initSmartContract(idl){
+        const smartCotract = {};
+        for (const instruction of idl.instructions) {
+            smartCotract[instruction.handle] = async (...args) => {
+                const rpCall = {
+                    id: idl.id,
+                    method: instructionhandle,
+                    args,  
+                }
+                return await this.call(rpCall);
+            }
+        }
+        return smartCotract;
+       }
+    async getBalance(address) {
+       
+    }
+    async transfer({from, to, amount }) {
+
+    }
+}
+
+const web3 = new Web3();
+console.log(web3);
+
+web3.setClientAddress('Tom'); 
+console.log(web3.address);
+const res = await web3.call({
+    id: 0,
+    args: [],
+    method: 'test',
+});
+
+console.log(res);
+
 ##
+Build a Smart Contract in Rust
+
 
 ##
